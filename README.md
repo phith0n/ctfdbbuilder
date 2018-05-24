@@ -22,3 +22,26 @@ $connect = new \DBBuilder\Connection('mysql', [
 ]);
 $builder = $connect->getBuilder();
 ```
+
+### Select (SQL injection)
+
+
+```php
+<?php
+$article = $builder->table('articles')->where('id', '=', $_GET['id'])->first();
+```
+
+```php
+<?php
+$article = $builder->table('users')->where('age', '>', $_GET['age'])->first();
+```
+
+```php
+<?php
+$article = $builder->table('users')->select('COUNT() AS `cnt`');
+```
+
+```php
+<?php
+$article = $builder->table('users')->where('username', $_POST['username'])->where('password', md5($_POST['password']))->first();
+```

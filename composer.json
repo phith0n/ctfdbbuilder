@@ -1,6 +1,6 @@
 {
     "name": "phithn/ctfdbbuilder",
-    "description": "a db builder for ctfer",
+    "description": "a database query builder for CTFer",
     "type": "library",
     "homepage": "https://github.com/phith0n/ctfdbbuilder",
     "keywords": [
