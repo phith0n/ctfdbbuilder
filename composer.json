@@ -1,0 +1,29 @@
+{
+    "name": "phithn/ctfdbbuilder",
+    "description": "a db builder for ctfer",
+    "type": "library",
+    "homepage": "https://github.com/phith0n/ctfdbbuilder",
+    "keywords": [
+        "ctf",
+        "query builder",
+        "sql",
+        "database",
+        "mysql",
+        "postgresql",
+        "sqlite"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "pimple/pimple": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "phith0n",
+            "email": "root@leavesongs.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"CTFDBBuilder": "src/"}
+    }
+}
