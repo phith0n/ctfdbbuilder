@@ -2,6 +2,12 @@
 
 一个无任何防护的PHP数据库Builder，支持Mysql/Postgresql/Sqlite。
 
+## Install
+
+```
+composer require phithn/ctfdbbuilder:dev-master
+```
+
 ## Usage
 
 ```php
