@@ -6,7 +6,7 @@
  * Time: 下午6:17
  */
 
-namespace DBBuilder;
+namespace CTFDBBuilder;
 
 
 use Pimple\Container;
@@ -38,7 +38,7 @@ class Connection
     protected function connect($adapter, $config)
     {
         $this->container['adapter'] = function (Container $c) use ($adapter, $config) {
-            $adapter = '\\DBBuilder\\Adapters\\' . ucfirst(strtolower($adapter)) . 'Adapter';
+            $adapter = '\\CTFDBBuilder\\Adapters\\' . ucfirst(strtolower($adapter)) . 'Adapter';
             return new $adapter($config);
         };
 

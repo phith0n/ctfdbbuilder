@@ -6,7 +6,7 @@
  * Time: 下午6:17
  */
 
-namespace DBBuilder\Adapters;
+namespace CTFDBBuilder\Adapters;
 
 
 abstract class BaseAdapter

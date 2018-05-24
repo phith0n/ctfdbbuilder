@@ -6,7 +6,7 @@
  * Time: 下午6:19
  */
 
-namespace DBBuilder\Adapters;
+namespace CTFDBBuilder\Adapters;
 
 
 class MysqlAdapter extends BaseAdapter

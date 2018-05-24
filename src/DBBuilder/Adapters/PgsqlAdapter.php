@@ -6,7 +6,7 @@
  * Time: 下午8:51
  */
 
-namespace DBBuilder\Adapters;
+namespace CTFDBBuilder\Adapters;
 
 
 class PgsqlAdapter extends BaseAdapter

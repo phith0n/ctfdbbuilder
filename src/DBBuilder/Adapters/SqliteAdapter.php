@@ -6,7 +6,7 @@
  * Time: 下午8:53
  */
 
-namespace DBBuilder\Adapters;
+namespace CTFDBBuilder\Adapters;
 
 
 class SqliteAdapter extends BaseAdapter

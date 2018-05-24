@@ -6,7 +6,7 @@
  * Time: 下午8:23
  */
 
-namespace DBBuilder;
+namespace CTFDBBuilder;
 
 
 
@@ -18,7 +18,7 @@ class QueryBuilder
     protected $connect;
 
     /**
-     * @var \DBBuilder\Adapters\BaseAdapter
+     * @var \CTFDBBuilder\Adapters\BaseAdapter
      */
     protected $adapter;
 
