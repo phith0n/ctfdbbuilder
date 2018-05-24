@@ -66,7 +66,9 @@ class QueryBuilder
 
     protected function prepareString($value)
     {
-        if (is_string($value)) {
+        if (is_null($value)) {
+            return 'null';
+        } elseif (is_string($value)) {
             return $this->adapter->escape($value);
         } else {
             return strval($value);
