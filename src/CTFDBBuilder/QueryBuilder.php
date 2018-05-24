@@ -92,7 +92,7 @@ class QueryBuilder
         } elseif ($argv == 2) {
             $this->addStatement('where', "{$this->escapeField($key)} = {$this->prepareString($op)}");
         } else {
-            $this->addStatement('where', "{$this->escapeField($key)} {$op} {$this->prepareString($op)}");
+            $this->addStatement('where', "{$this->escapeField($key)} {$op} {$this->prepareString($value)}");
         }
         return $this;
     }
