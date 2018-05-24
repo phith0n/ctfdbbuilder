@@ -5,7 +5,7 @@
 ## Install
 
 ```
-composer require phithn/ctfdbbuilder:dev-master
+composer require phith0n/ctfdbbuilder:dev-master
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ composer require phithn/ctfdbbuilder:dev-master
 <?php
 include 'vendor/autoload.php';
 
-$connect = new \DBBuilder\Connection('mysql', [
+$connect = new \CTFDBBuilder\Connection('mysql', [
     'driver'    => 'mysql', // Db driver
     'host'      => 'localhost',
     'database'  => 'your-database',
