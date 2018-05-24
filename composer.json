@@ -24,6 +24,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"CTFDBBuilder": "src/"}
+        "psr-4": {"CTFDBBuilder\\": "src/"}
     }
 }
