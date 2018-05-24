@@ -38,7 +38,12 @@ $article = $builder->table('users')->where('age', '>', $_GET['age'])->first();
 
 ```php
 <?php
-$article = $builder->table('users')->select('COUNT() AS `cnt`');
+$article = $builder->table('users')->orderBy('age', 'desc')->get();
+```
+
+```php
+<?php
+$article = $builder->table('users')->select('COUNT() AS `cnt`')->first();
 ```
 
 ```php
