@@ -264,7 +264,7 @@ class QueryBuilder
         if($argc == 2) {
             return "{$this->escapeField($field)} = {$this->adapter->escape($op)}";
         } elseif($argc == 3) {
-            return "{$this->escapeField($field)} {$op} {$this->adapter->escape($op)}";
+            return "{$this->escapeField($field)} {$op} {$this->adapter->escape($value)}";
         } else {
             return $field;
         }
