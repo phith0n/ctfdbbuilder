@@ -35,9 +35,7 @@ class QueryBuilder
 
     protected function addStatement($key, $value, $overwrite = false)
     {
-        if (!is_array($value)) {
-            $value = array($value);
-        }
+        $value = array($value);
 
         if ($overwrite || !array_key_exists($key, $this->statements)) {
             $this->statements[$key] = $value;
@@ -147,7 +145,7 @@ class QueryBuilder
         return $this;
     }
 
-    public function set($key, $value)
+    public function set($key, $value = null)
     {
         if (is_array($key)) {
             foreach ($key as $_k => $_v) {

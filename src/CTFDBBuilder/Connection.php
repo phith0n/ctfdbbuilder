@@ -56,4 +56,13 @@ class Connection
     {
         return $this->container['builder'];
     }
+
+    static public function newBuilder(...$args)
+    {
+        if (!self::$storedConnection) {
+            self::$storedConnection = new self(...$args);
+        }
+
+        return self::$storedConnection->getBuilder();
+    }
 }
