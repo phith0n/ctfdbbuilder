@@ -258,15 +258,15 @@ class QueryBuilder
         return $this->execute($sql);
     }
 
-    public function Q($field, $op = null, $value = null)
+    public function Q(...$args)
     {
-        $argc = func_num_args();
+        $argc = count($args);
         if($argc == 2) {
-            return "{$this->escapeField($field)} = {$this->adapter->escape($op)}";
+            return "{$this->escapeField($args[0])} = {$this->adapter->escape($args[1])}";
         } elseif($argc == 3) {
-            return "{$this->escapeField($field)} {$op} {$this->adapter->escape($value)}";
+            return "{$this->escapeField($args[0])} {$args[1]} {$this->adapter->escape($args[2])}";
         } else {
-            return $field;
+            return $args[0];
         }
     }
 }
