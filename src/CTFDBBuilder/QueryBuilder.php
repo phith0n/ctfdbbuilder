@@ -84,9 +84,9 @@ class QueryBuilder
         }
     }
 
-    public function where($key, $op = null, $value = null)
+    public function where(...$args)
     {
-        $this->addStatement('where', $this->Q($key, $op, $value));
+        $this->addStatement('where', $this->Q(...$args));
         return $this;
     }
 
