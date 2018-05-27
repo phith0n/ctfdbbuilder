@@ -86,14 +86,7 @@ class QueryBuilder
 
     public function where($key, $op = null, $value = null)
     {
-        $argv = func_num_args();
-        if ($argv == 1) {
-            $this->addStatement('where', $key);
-        } elseif ($argv == 2) {
-            $this->addStatement('where', "{$this->escapeField($key)} = {$this->prepareString($op)}");
-        } else {
-            $this->addStatement('where', "{$this->escapeField($key)} {$op} {$this->prepareString($value)}");
-        }
+        $this->addStatement('where', $this->Q($key, $op, $value));
         return $this;
     }
 
@@ -263,5 +256,17 @@ class QueryBuilder
             return ' WHERE ' . implode(" AND ", $state) . ' ';
         });
         return $this->execute($sql);
+    }
+
+    public function Q($field, $op = null, $value = null)
+    {
+        $argc = func_num_args();
+        if($argc == 2) {
+            return "{$this->escapeField($field)} = {$this->adapter->escape($op)}";
+        } elseif($argc == 3) {
+            return "{$this->escapeField($field)} {$op} {$this->adapter->escape($op)}";
+        } else {
+            return $field;
+        }
     }
 }
